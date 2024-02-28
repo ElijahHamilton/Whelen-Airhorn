@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 	printf("swap rate (Hz): %f\n", srate);
 	printf("duty cycle (%%): %f\n\n", duty*100);
 
-	for(int i = 1; i<fs*dur; i++) {
+	for(int i=1; i<fs*dur; i++) {
 		freq = fmod(i*srate/fs, 1);
 
 		if((freq > duty) == (freq2 > duty)) {	//upon completing a full cycle, reset the phase
