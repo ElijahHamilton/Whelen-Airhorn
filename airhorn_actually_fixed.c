@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 	FILE *fout = fopen("output.raw", "wb");
 
 	printf("swap rate (Hz): %f\n", srate);
-	printf("duty cycle (%%): %f\n\n", duty);
+	printf("duty cycle (%%): %f\n\n", duty*100);
 
 	for(int i = 1; i<fs*dur; i++) {
 		freq = fmod(i*srate/fs, 1);
